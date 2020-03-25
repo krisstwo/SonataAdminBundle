@@ -172,8 +172,8 @@ CASESENSITIVE;
                             ->info('Label Catalogue used for admin services if one isn\'t provided.')
                         ->end()
                         ->scalarNode('default_icon')
-                            ->defaultValue('<i class="fa fa-folder"></i>')
-                            ->info('Icon used for admin services if one isn\'t provided.')
+                            ->defaultValue('<i class="nav-icon fa fa-folder"></i>')
+                            ->info("Icon used for admin services if one isn't provided.")
                         ->end()
                         ->integerNode('dropdown_number_groups_per_colums')->defaultValue(2)->end()
                         ->enumNode('title_mode')
@@ -245,7 +245,7 @@ CASESENSITIVE;
                                 ->children()
                                     ->scalarNode('label')->end()
                                     ->scalarNode('label_catalogue')->end()
-                                    ->scalarNode('icon')->end()
+                                    ->scalarNode('icon')->defaultValue('<i class="nav-icon fa fa-folder"></i>')->end()
                                     ->scalarNode('on_top')->defaultFalse()->info('Show menu item in side dashboard menu without treeview')->end()
                                     ->scalarNode('keep_open')->defaultFalse()->info('Keep menu group always open')->end()
                                     ->scalarNode('provider')->end()
@@ -436,7 +436,7 @@ CASESENSITIVE;
                                 'bundles/sonatacore/vendor/bootstrap/dist/css/bootstrap.min.css',
                                 'bundles/sonatacore/vendor/components-font-awesome/css/font-awesome.min.css',
                                 'bundles/sonatacore/vendor/ionicons/css/ionicons.min.css',
-                                'bundles/sonataadmin/vendor/admin-lte/dist/css/AdminLTE.min.css',
+                                'bundles/sonataadmin/vendor/admin-lte/dist/css/adminlte.min.css',
                                 'bundles/sonataadmin/vendor/iCheck/skins/square/blue.css',
 
                                 'bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
@@ -476,6 +476,7 @@ CASESENSITIVE;
 
                                 'bundles/sonatacore/vendor/moment/min/moment.min.js',
 
+                                'bundles/sonataadmin/vendor/popper.js/dist/umd/popper.js',
                                 'bundles/sonatacore/vendor/bootstrap/dist/js/bootstrap.min.js',
 
                                 'bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
@@ -487,7 +488,7 @@ CASESENSITIVE;
 
                                 'bundles/sonatacore/vendor/select2/select2.min.js',
 
-                                'bundles/sonataadmin/vendor/admin-lte/dist/js/app.min.js',
+                                'bundles/sonataadmin/vendor/admin-lte/dist/js/adminlte.min.js',
                                 'bundles/sonataadmin/vendor/iCheck/icheck.min.js',
                                 'bundles/sonataadmin/vendor/slimScroll/jquery.slimscroll.min.js',
                                 'bundles/sonataadmin/vendor/waypoints/lib/jquery.waypoints.min.js',

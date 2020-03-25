@@ -25,19 +25,17 @@ file that was distributed with this source code.
     {% endif %}
 
     <div class="col-lg-4 col-md-6 search-box-item {{ visibility_class }}">
-        <div class="box box-solid {{ visibility_class }}">
-            <div class="box-header with-border {{ visibility_class }}">
+        <div class="card card-solid {{ visibility_class }}">
+            <div class="card-header with-border {{ visibility_class }}">
                 {% set icon = settings.icon|default('') %}
                 {{ icon|raw }}
-                <h3 class="box-title">
-                    {% if admin.label is not empty %}
-                        {{ admin.label|trans({}, admin.translationdomain) }}
-                    {% endif %}
+                <h3 class="card-title">
+                    {{ admin.label|trans({}, admin.translationdomain) }}
                 </h3>
 
-                <div class="box-tools pull-right">
-                    {% if results_count > 0 %}
-                        <span class="badge">{{ results_count }}</span>
+                <div class="card-tools pull-right">
+                    {% if pager and pager.getNbResults() > 0 %}
+                        <span class="badge">{{ pager.getNbResults() }}</span>
                     {% elseif admin.hasRoute('create') and admin.hasAccess('create') %}
                         <a href="{{ admin.generateUrl('create') }}" class="btn btn-box-tool">
                             <i class="fa fa-plus" aria-hidden="true"></i>
@@ -50,10 +48,10 @@ file that was distributed with this source code.
                     {% endif %}
                 </div>
             </div>
-            {% if results_count > 0 %}
-                <div class="box-body no-padding">
-                    <ul class="nav nav-stacked sonata-search-result-list products-list">
-                        {% for result in current_page_results %}
+            {% if pager and pager.getResults()|length %}
+                <div class="card-body p-0">
+                    <ul class="nav nav-stacked sonata-search-result-list">
+                        {% for result in pager.getResults() %}
                             {% set link = admin.getSearchResultLink(result) %}
                             {% if link %}
                                 <li class="item no-padding">
@@ -84,7 +82,7 @@ file that was distributed with this source code.
                     </ul>
                 </div>
             {% else %}
-                <div class="box-body">
+                <div class="card-body">
                     <p>
                         <em>{{ 'no_results_found'|trans({}, 'SonataAdminBundle') }}</em>
                     </p>
