@@ -3,6 +3,34 @@
  * http://startbootstrap.com/templates/sb-admin-v2/
 */
 
+/* breadcrumb */
+
+.sonata-bc .breadcrumb {
+    padding: 0;
+    margin: 0;
+    background: inherit;
+    float:left;
+}
+
+.sonata-bc .breadcrumb li a {
+    display: inline-block;
+}
+
+/* Content navbar */
+
+body .content-header .navbar {
+    position: relative;
+}
+
+.content-wrapper, .right-side {
+    background-color: #ecf0f5;
+}
+
+body.fixed .main-sidebar {
+    position: absolute;
+    height: 100%;
+}
+/*
 html {
     position: relative;
     min-height: 100%;
@@ -23,7 +51,9 @@ footer p {
 footer a {
     color: #f6f6f6;
 }
+*/
 
+/*
 body > .header .logo {
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -52,6 +82,7 @@ body > .header .logo {
     -webkit-animation-duration: .3s;
     -moz-animation-duration: .3s;
 }
+*/
 
 .dropdown-menu-scrollable {
     overflow-y: auto;
@@ -59,7 +90,7 @@ body > .header .logo {
 }
 
 /* Buttons */
-
+/*
 .btn.btn-outline {
     color: inherit;
     background-color: transparent;
@@ -75,6 +106,7 @@ body > .header .logo {
 }
 
 
+*/
 
 /* navigation */
 
@@ -109,21 +141,10 @@ body > .header .logo {
     margin-right: 0;
 }
 
-/* breadcrumb */
-
-.sonata-bc .breadcrumb {
-    padding: 0;
-    margin: 0;
-    background: inherit;
-    float:left;
-}
-
-.sonata-bc .breadcrumb li a {
-    display: inline-block;
-}
 
 /* MEGA MENU STYLE
 ********************************/
+/*
 .dropdown-menu .dropdown-menu {
     display: block !important;
     position: static !important;
@@ -140,9 +161,9 @@ body > .header .logo {
     white-space: normal;
     overflow: hidden;
 }
-
+*/
 /* top right */
-
+/*
 .navbar-static-top {
     margin-bottom: 0;
 }
@@ -215,15 +236,11 @@ body > .header .logo {
     right: 0;
     left: auto;
 }
+*/
 
-/* Content navbar */
-
-body.fixed .content-header .navbar {
-    position: relative;
-}
 
 /* sidebar menu styles */
-
+/*
 .sidebar-search {
     padding: 15px;
 }
@@ -272,7 +289,7 @@ body.fixed .content-header .navbar {
     }
 }
 
-
+*/
 /* Admin table */
 
 table.sonata-ba-list {
@@ -328,7 +345,7 @@ form.sonata-filter-form.form-stacked {
     padding-left: 0;
 }
 
-body.fixed .sonata-list-table {
+body .sonata-list-table {
     position: relative;
     margin-left: 15px;
     margin-right: 15px;
@@ -342,6 +359,7 @@ body.fixed .sonata-list-table {
 /* Overrides */
 
 /* x-editable */
+/*
 td.sonata-ba-list-field .editable {
     cursor: pointer;
 }
@@ -363,15 +381,20 @@ td.sonata-ba-list-field .editable-empty:not(.editable-open) {
 .editable-container .next:before {
     content: "\2192 ";
 }
-
+*/
 /* bootstrap */
+
+/* See https://github.com/sonata-project/SonataAdminBundle/issues/2950 */
+/*
 .input-group-addon {
-    width: auto; /* See https://github.com/sonata-project/SonataAdminBundle/issues/2950 */
+    width: auto;
 }
+
 
 /**
  * Make checkbox / radio label consistant with other labels
  */
+/*
 .checkbox label,
 .radio label {
     font-weight: 700;
@@ -385,11 +408,12 @@ body.sonata-icheck .radio label {
   padding-left: 0;
   margin-left: 0;
 }
-
+*/
 /**
  * The iCheck checkboxes & radios have 0 margin by default,
  * add some space for the label text.
  */
+/*
 .checkbox div[class^="icheckbox"],
 .checkbox-inline div[class^="icheckbox"],
 .radio div[class^="iradio"],
@@ -409,7 +433,9 @@ body.sonata-icheck .radio label {
     margin-right: 5px;
     margin-top: -3px;
 }
+ */
 /* Hide Delete checkbox on sonata_type_collection tables */
+/*
 .sonata-ba-field-inline-table td > div.checkbox > label > .control-label__text {
     position: absolute;
     width: 1px;
@@ -420,13 +446,15 @@ body.sonata-icheck .radio label {
     clip: rect(0,0,0,0);
     border: 0;
 }
-
+*/
 /* select2 */
+/*
 .select2-choice, .select2-choices, .select2-drop {
     border-radius: 0 !important;
 }
-
+*/
 /* Used for the mosaic view */
+/*
 td > div.row {
     padding: 0;
     margin: 0;
@@ -537,3 +565,4 @@ div.sonata-filters-box div.form-group span.input-group-addon {
 .sonata-search-result-show {
     display: block;
 }
+*/

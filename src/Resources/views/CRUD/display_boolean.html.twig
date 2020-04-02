@@ -16,11 +16,11 @@ file that was distributed with this source code.
         {% set text = 'label_type_no'|trans({}, 'SonataAdminBundle') %}
     {% endif %}
 
-    {% if field_description.option('inverse', false) ? not value : value %}
-        {% set class = 'label-success' %}
+    {% if field_description.options.inverse|default(false) ? not value : value %}
+        {% set class = 'bg-success' %}
     {% else %}
-        {% set class = 'label-danger' %}
+        {% set class = 'bg-danger' %}
     {% endif %}
 
-    <span class="label {{ class }}">{{ text }}</span>
+    <span class="badge {{ class }}">{{ text }}</span>
 {% endapply -%}
