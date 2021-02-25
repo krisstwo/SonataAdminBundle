@@ -1,4 +1,4 @@
-/*
+
 div.border {
     border: 1px solid #DDDDDD;
     border-radius: 6px 6px 6px 6px;
@@ -331,7 +331,7 @@ legend.sonata-ba-fieldset-collapsed-description + .sonata-ba-collapsed-fields {
     text-align: center;
     width: 100%;
 }
-*/
+
 body .content-header .navbar.stuck {
     position:fixed;
     top:50px;
@@ -369,8 +369,6 @@ body .content-header .navbar.stuck {
     word-wrap: break-word;
 }
 
-
-
 @media(max-width:768px) {
     body.fixed .main-header {
         position: relative;
@@ -393,10 +391,10 @@ body .content-header .navbar.stuck {
     body.fixed .main-sidebar .sidebar {
         overflow: visible !important;
         height: auto !important;
-    }
+    }*/
     .navbar-custom-menu > .navbar-nav > li >.dropdown-menu {
         width: auto !important;
-        min-width: 230px; /* width of the left sidebar
+        min-width: 230px; /* width of the left sidebar */
     }
 }
 
