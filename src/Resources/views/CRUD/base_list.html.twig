@@ -295,7 +295,7 @@ file that was distributed with this source code.
                                             {{ form_widget(form[filter.formName].children['value']) }}
                                         </div>
 
-                                        {% if filterCanBeDisplayed %}
+                                        {% if filterVisible %}
                                             <div class="col-sm-1">
                                                 <label class="control-label">
                                                     <a href="#" class="sonata-toggle-filter sonata-ba-action" filter-target="filter-{{ admin.uniqid }}-{{ filter.name }}" filter-container="filter-container-{{ admin.uniqid() }}">
